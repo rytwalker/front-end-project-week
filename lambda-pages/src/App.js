@@ -16,7 +16,7 @@ class App extends Component {
       <div className="App">
         <Route component={Sidebar} />
         {/* Routes */}
-        <Route exact path="/" component={NotesView} />
+        <Route component={NotesView} />
         <Route path="/create-note" component={CreateNoteView} />
         <Route path="/note/:id/edit" component={EditNoteView} />
         <Route exact path="/note/:id" component={NoteView} />

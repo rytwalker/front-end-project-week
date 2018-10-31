@@ -5,11 +5,6 @@ import { DragDropContext } from 'react-beautiful-dnd';
 import Notes from '../components/Notes';
 import styled from 'styled-components';
 
-const ColumnContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-`;
-
 // dummy data
 // import notesData from '../notes';
 
@@ -52,10 +47,6 @@ class NotesView extends Component {
 
   render() {
     const { notes, isFetching } = this.props;
-    // const thirdNotes = notes.filter((note, index) => index % 3 === 0);
-    // const twoThirdNotes = notes.filter((note, index) => index % 3 === 1);
-    // const threeThirdNotes = notes.filter((note, index) => index % 3 === 2);
-    // console.log(thirdNotes, twoThirdNotes, threeThirdNotes);
     return (
       <DragDropContext onDragEnd={this.onDragEnd}>
         <div className="View NoteView">
@@ -63,23 +54,11 @@ class NotesView extends Component {
           {isFetching ? (
             <div>Loading Your Notes...</div>
           ) : (
-            <ColumnContainer>
-              <Notes
-                id="1"
-                notes={notes.filter((note, index) => index % 3 === 0)}
-                handleRedirectToNoteView={this.handleRedirectToNoteView}
-              />
-              <Notes
-                id="2"
-                notes={notes.filter((note, index) => index % 3 === 1)}
-                handleRedirectToNoteView={this.handleRedirectToNoteView}
-              />
-              <Notes
-                id="3"
-                notes={notes.filter((note, index) => index % 3 === 2)}
-                handleRedirectToNoteView={this.handleRedirectToNoteView}
-              />
-            </ColumnContainer>
+            <Notes
+              id="1"
+              notes={notes.filter((note, index) => index % 3 === 0)}
+              handleRedirectToNoteView={this.handleRedirectToNoteView}
+            />
           )}
         </div>
       </DragDropContext>

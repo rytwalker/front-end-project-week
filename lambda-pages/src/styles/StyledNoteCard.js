@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const StyledNoteCard = styled.div`
   height: 265px;
-  width: 90%;
+  width: 31%;
   position: relative;
   background: #fff;
   margin-bottom: 2rem;

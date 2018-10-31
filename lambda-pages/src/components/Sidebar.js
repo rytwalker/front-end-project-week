@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import NotesView from '../views/NotesView';
 import Button from '../styles/Button';
 
 const StyledSidebar = styled.div`

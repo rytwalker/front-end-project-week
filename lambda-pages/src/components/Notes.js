@@ -4,11 +4,9 @@ import { Droppable } from 'react-beautiful-dnd';
 import NoteCard from './NoteCard';
 
 const StyledNotes = styled.div`
-  width: 30%;
-  flex: 1;
-  /* display: flex;
+  display: flex;
   justify-content: space-between;
-  flex-wrap: wrap; */
+  flex-wrap: wrap;
 `;
 
 class Notes extends Component {
